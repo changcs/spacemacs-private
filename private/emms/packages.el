@@ -76,5 +76,6 @@ Each entry is either:
     (require 'emms-setup)
     (emms-standard)
     (emms-default-players)
+    (emms-mode-line-disable)
   )
 )
