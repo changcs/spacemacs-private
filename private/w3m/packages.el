@@ -78,6 +78,7 @@
    (list (read-string "Enter website address (default: google.com):" nil nil "google.com" nil )))
   (v/w3m-open-url-with 'w3m-goto-url-new-session url))
 
+;; Use 'M' key to browse the url (under cursor) with firefox
 (defun w3m/init-w3m()
   "Initializes w3m and adds keybindings for its exposed functionalities."
   (use-package w3m
