@@ -117,7 +117,8 @@
           "wm" 'w3m-view-url-with-external-browser
           "wb" 'helm-w3m-bookmarks
           "wB" 'w3m-bookmark-view
-        ))))
+        )
+      (keymap-unset evil-motion-state-map "RET"))))
 
 (with-eval-after-load 'w3m
   (define-key w3m-mode-map (kbd "C-f") 'evil-scroll-page-down)
