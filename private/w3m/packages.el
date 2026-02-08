@@ -79,6 +79,7 @@
   (v/w3m-open-url-with 'w3m-goto-url-new-session url))
 
 ;; Use 'M' key to browse the url (under cursor) with firefox
+;; Use 'C-c C-t' key to copy buffer
 ;; Use 'wg' key to w3m-goto-url-new-session
 (defun w3m/init-w3m()
   "Initializes w3m and adds keybindings for its exposed functionalities."
