@@ -79,6 +79,7 @@
   (v/w3m-open-url-with 'w3m-goto-url-new-session url))
 
 ;; Use 'M' key to browse the url (under cursor) with firefox
+;; Use 'wg' key to w3m-goto-url-new-session
 (defun w3m/init-w3m()
   "Initializes w3m and adds keybindings for its exposed functionalities."
   (use-package w3m
@@ -118,6 +119,7 @@
           "wm" 'w3m-view-url-with-external-browser
           "wb" 'helm-w3m-bookmarks
           "wB" 'w3m-bookmark-view
+          "wg" 'w3m-goto-url-new-session
         )
       (keymap-unset evil-motion-state-map "RET"))))
 
@@ -125,6 +127,7 @@
   (define-key w3m-mode-map (kbd "C-f") 'evil-scroll-page-down)
   (define-key w3m-mode-map (kbd "C-b") 'evil-scroll-page-up)
   (define-key w3m-mode-map (kbd "SPC") 'evil-evilified-state)
+  (keymap-unset w3m-mode-map "G")
   (keymap-unset w3m-mode-map "L"))
 
 (defun v/init-w3m ()
