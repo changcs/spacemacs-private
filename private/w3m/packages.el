@@ -124,7 +124,8 @@
 (with-eval-after-load 'w3m
   (define-key w3m-mode-map (kbd "C-f") 'evil-scroll-page-down)
   (define-key w3m-mode-map (kbd "C-b") 'evil-scroll-page-up)
-  (define-key w3m-mode-map (kbd "SPC") 'evil-evilified-state))
+  (define-key w3m-mode-map (kbd "SPC") 'evil-evilified-state)
+  (keymap-unset w3m-mode-map "L"))
 
 (defun v/init-w3m ()
   (use-package w3m
